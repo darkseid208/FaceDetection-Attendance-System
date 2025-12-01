@@ -1,148 +1,116 @@
-📘 AI-Powered Facial Recognition Attendance System
+✨ Overview
 
-A complete attendance management system using AI face recognition, CustomTkinter UI, and MySQL database, designed for schools, colleges, and institutions.
+The AI Facial Recognition Attendance System is a professional-grade application built with:
 
-🚀 Overview
+🧠 AI-powered face recognition (dlib + face_recognition)
 
-This project is an advanced end-to-end Facial Recognition Attendance System built using:
+🎨 Modern CustomTkinter GUI
 
-Python
+🗄 MySQL database with secure login
 
-OpenCV
+📊 Beautiful dashboards and analytics
 
-face_recognition (dlib)
+🧑‍🏫 Separate portals for Teachers and Students
 
-CustomTkinter (Modern UI)
+📷 Real-time webcam-based attendance
 
-MySQL Database
+This project is perfect for college submissions, portfolio projects, and real institutional use.
 
-Matplotlib (Graphs & Analytics)
+🚀 Features
+👨‍🏫 Teacher Portal
 
-It offers separate dashboards for Students and Teachers, real-time attendance tracking, visual analytics, and a fully functional authentication system.
+📌 Add / Edit / Delete Students
 
-⭐ Features
+🔍 Search attendance by date, name, or ID
 
-🧑‍🎓 Student Features:
-Login using username & password
+📣 Send warnings to students
 
-Mark attendance using AI face recognition
+📈 Student-wise attendance charts
 
-View personal attendance history
+🧾 Attendance history viewer
 
-Real-time attendance graph
+👤 Editable profile page with image upload
 
-Warning messages from teacher
+🧩 Dynamic dashboards & KPIs
 
-Profile page (view-only)
+🧑‍🎓 Student Portal
 
-👨‍🏫 Teacher Features:
-Full dashboard with analytics
+🤳 AI Facial Attendance Marking
 
-Add / Edit / Delete students
+📄 View attendance history
 
-View attendance records (search by name or reg no.)
+📊 Attendance progress (circular graph)
 
-Send warning messages to students
+⚠ Receive warnings from teachers
 
-Real-time CSV watcher auto-updates KPIs
+👁 Student profile viewer
 
-Detailed daily/student-wise attendance graph
+⚙ System Highlights
 
-Teacher profile page (edit name, email, mobile, photo)
+⚡ Real-time face recognition
 
-⚙ Technical Highlights
+🔄 Auto-updating CSV + JSON data
 
-Smart CSV attendance parser
+🧵 Multi-threaded camera handling
 
-Supports multiple date formats
+🎛 Smooth animations & modern UI
 
-Auto username normalization
+🧩 Clean modular architecture
 
-Modern UI using CustomTkinter
-
-MySQL-based authentication & student management
-
-Scrollable dashboards & pages
-
-Profile photo upload/removal
-
-🗂️ Folder Structure (Recommended)
-📦 facial-recognition-attendance-system
+🏗 Project Architecture
+📦 Facial-Recognition-Attendance-System
  ┣ 📁 profile_images/
- ┣ 📁 models/                (if you store face encodings/dlib models)
+ ┣ 📁 models/
  ┣ 📄 main.py
  ┣ 📄 student.py
  ┣ 📄 attendance.py
- ┣ 📄 User_Authentication.py
  ┣ 📄 view_attendance.py
+ ┣ 📄 User_Authentication.py
  ┣ 📄 db_connection.py
- ┣ 📄 warnings.json          (auto-created)
- ┣ 📄 students.json          (student list)
- ┣ 📄 profiles.json          (teacher/student profiles)
- ┣ 📄 Attendance.csv         (attendance saved here)
+ ┣ 📄 warnings.json
+ ┣ 📄 students.json
+ ┣ 📄 Attendance.csv
  ┣ 📄 requirements.txt
  ┗ 📄 README.md
 
+📸 Screenshots (Add yours here)
+🔐 Login Page
 
+🏠 Dashboard
 
-⚠ If face_recognition fails
-Install CMake and Visual Studio Build Tools (Windows).
+🤳 Face Recognition
 
-🗄️ MySQL Setup
-Create Database + User
+(You can upload real screenshots later and I will embed them beautifully.)
 
-Run this in MySQL Workbench:
+🛠 Installation
+1️⃣ Install Dependencies
+pip install opencv-python
+pip install face_recognition
+pip install customtkinter
+pip install mysql-connector-python
+pip install pillow
+pip install matplotlib
 
-CREATE DATABASE IF NOT EXISTS face_attendance;
+🗄 MySQL Setup
+CREATE DATABASE face_attendance;
 
-CREATE USER IF NOT EXISTS 'pythonuser'@'localhost'
-IDENTIFIED BY '12345';
-
+CREATE USER 'pythonuser'@'localhost' IDENTIFIED BY '12345';
 GRANT ALL PRIVILEGES ON face_attendance.* TO 'pythonuser'@'localhost';
 FLUSH PRIVILEGES;
 
-Import Student Table
 
-Run:
+Import student structure:
 
 source fix_students_complete.sql;
 
-▶️ How to Run
+▶️ Run the Application
 python main.py
 
-Application Flow:
-
-Login page appears
-
-Student → Attendance Dashboard
-
-Teacher → Full Management Dashboard
-
-Face recognition window opens when marking attendance
-
-📸 Screenshots
-
-(You can add your own screenshots here)
-
-📚 Tech Used
-
-Python
-
-CustomTkinter
-
-OpenCV
-
-dlib / face_recognition
-
-MySQL
-
-Matplotlib
-
-🤝 Contributing
-
-Pull requests are welcome.
-For major changes, open an issue first to discuss improvements.
-
-📝 License
-
-This project is free to use for educational purposes.
+📊 Tech Stack
+Component	Technology
+Frontend GUI	CustomTkinter
+Backend	Python
+AI Engine	face_recognition (dlib), OpenCV
+Database	MySQL
+Graphs	Matplotlib
+Storage	CSV + JSON + MySQL
