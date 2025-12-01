@@ -1,0 +1,22 @@
+{
+    "student4": [
+        {
+            "message": "Please maintain your attedance of 75%",
+            "time": "2025-11-26 02:00:10"
+        }
+    ],
+    "student1": [
+        {
+            "message": "Maintain regular attedance",
+            "from": "teacher1",
+            "time": "2025-11-26 03:04:40"
+        }
+    ],
+    "student2": [
+        {
+            "message": "Mark your attendance regularly",
+            "from": "teacher1",
+            "time": "2025-11-26 15:20:16"
+        }
+    ]
+}

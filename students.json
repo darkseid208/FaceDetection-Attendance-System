@@ -1,0 +1,58 @@
+{
+  "student1": {
+    "username": "student1",
+    "student_id": "D222327663",
+    "full_name": "Samir Prasad",
+    "password": "",
+    "email": "sameerprasad859@gmail.com",
+    "phone": "8918161216",
+    "parent_phone": "9831847299",
+    "department": "Engineering",
+    "course": "DCST",
+    "address": "",
+    "profile_pic": "media/profile_pics/samirprasad.png",
+    "updated_at": "2025-11-28T15:28:56.313970"
+  },
+  "student2": {
+    "username": "student2",
+    "student_id": "D222327664",
+    "full_name": "Sachin Prasad",
+    "password": "",
+    "email": "sachinprasad7492@gmail.com",
+    "phone": "7001673531",
+    "parent_phone": "9831847299",
+    "department": "Engineering",
+    "course": "CSE",
+    "address": "Barddhaman",
+    "profile_pic": "",
+    "updated_at": "2025-11-28T15:27:53.581540"
+  },
+  "student3": {
+    "username": "student3",
+    "student_id": "D222327665",
+    "full_name": "Anindita Bairagi",
+    "password": "",
+    "email": "aninditabariagi1310@gmail.com",
+    "phone": "6291098656",
+    "parent_phone": "",
+    "department": "Arts",
+    "course": "History Honors",
+    "address": "",
+    "profile_pic": "media\\profile_pics\\student3.png",
+    "updated_at": "2025-12-01T16:29:08.464626"
+  },
+  "student4": {
+    "username": "student4",
+    "student_id": "D222327648",
+    "full_name": "Ahana Roy",
+    "password": "",
+    "email": "ahanaroy1210@gmail.com",
+    "phone": "8250901778",
+    "parent_phone": "8918161216",
+    "department": "Engineering",
+    "course": "DCST",
+    "address": "Barddhaman",
+    "profile_pic": "media\\profile_pics\\student4.png",
+    "updated_at": "2025-11-30T19:10:15.557778"
+  }
+}
