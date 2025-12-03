@@ -1,4 +1,4 @@
-# Facial Recognition Attendance System
+# 🎓Facial Recognition Attendance System
 
 This project is an AI-powered automated attendance system that replaces traditional manual roll-calling with live facial recognition. It uses webcam-based face detection, generates face encodings, identifies individuals, and records attendance with timestamps.
 
@@ -90,7 +90,7 @@ Attendance is stored inside:
 - students.db (optional)
 - JSON files for dashboard display
 
-## Database Structure
+## D0atabase Structure
 
 ### users.db
 Stores login details:
@@ -108,16 +108,33 @@ Stores student information:
 - phone
 - profile_pic
 
-## Workflows
+## 🧑‍🏫 Teacher Features
 
-### Automatic Attendance Flow
-Webcam -> Face Detection -> Encoding -> Compare -> Match -> Mark Attendance
+Teachers have full control over the system. Features include:
 
-### Teacher Dashboard Flow
-Login -> Dashboard -> View students -> Capture faces -> Train data -> View attendance -> Export CSV
+- 📸 Capture student faces for training
+- 🧠 Train the facial recognition model (train.pkl)
+- 👥 Add, edit, and manage student profiles
+- 🎥 Start real-time attendance scanning
+- 📊 View attendance graphs and analytics
+- ✏️ Manually mark or correct attendance
+- 📅 Access daily, monthly, and overall attendance reports
+- 📤 Export attendance data to CSV
+- 📝 View recent activity logs
+- ⚠️ Manage low-attendance warnings
 
-### Student Dashboard Flow
-Login -> Dashboard -> View attendance summary -> View graphs -> Profile details
+## 👨‍🎓 Student Features
+
+Students can access personal attendance information. Features include:
+
+- 📅 View daily and monthly attendance
+- 📈 See attendance percentage progress
+- 🧾 Access complete attendance history
+- 📊 View attendance graph (line/bar chart)
+- 👤 View personal profile information
+- 🔐 Secure login to student dashboard
+- ⚠️ Track warnings for low attendance
+
 ## Future Enhancements
 
 - Cloud database integration
