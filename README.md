@@ -34,37 +34,35 @@ The system automatically detects faces using the webcam, compares them with the 
 - PIL for image processing
 - Matplotlib for attendance graphs
 
-## Folder Structure
-
-Facial Recognition Attendance System/
+## Facial Recognition Attendance System/
 │
-├── main.py                     (Main application with dashboards)
-├── User_Authentication.py      (Login system)
-├── capture_all_students.py     (Capture images for training)
-├── train_data.py               (Generates facial encodings and creates train.pkl)
-├── attendance.py               (Attendance marking logic)
-├── student.py                  (Student data model)
-├── view_attendance.py          (Graph rendering)
+├── main.py (Main application with dashboards)
+├── User_Authentication.py (Login system)
+├── capture_all_students.py (Capture images for training)
+├── train_data.py (Generates facial encodings and creates train.pkl)
+├── attendance.py (Attendance marking logic)
+├── student.py (Student data model)
+├── view_attendance.py (Graph rendering)
 │
-├── profiles.json               (All user profiles)
-├── students.json               (Student details)
-├── warnings.json               (Warning information)
-├── attendance.csv              (Attendance log)
-├── students_local.csv          (Local backup of students)
-├── train.pkl                   (Trained facial encodings)
+├── profiles.json (All user profiles)
+├── students.json (Student details)
+├── warnings.json (Warning information)
+├── attendance.csv (Attendance log)
+├── students_local.csv (Local backup of students)
+├── train.pkl (Trained facial encodings)
 │
-├── students.db                 (Student database)
-├── users.db                    (User login database)
+├── students.db (Student database)
+├── users.db (User login database)
 │
-├── dataset/                    (Captured images for training)
-├── known_faces/                (Encoded face data)
-├── certified_faces/            (Verified face images)
-├── profile_images/             (Profile photos)
-├── media/                      (UI images and icons)
-├── images/                     (Misc images)
-├── exports/                    (Exported reports)
+├── dataset/ (Captured images for training)
+├── known_faces/ (Encoded face data)
+├── certified_faces/ (Verified face images)
+├── profile_images/ (Profile photos)
+├── media/ (UI images and icons)
+├── images/ (Misc images)
+├── exports/ (Exported reports)
 │
-└── venv/                       (Virtual environment)
+└── venv/ (Virtual environment)
 
 ## How the System Works
 
