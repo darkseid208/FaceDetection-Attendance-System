@@ -2,6 +2,13 @@
 
 This project is an AI-powered automated attendance system that replaces traditional manual roll-calling with live facial recognition. It uses webcam-based face detection, generates face encodings, identifies individuals, and records attendance with timestamps.
 
+## Project Overview
+The system provides two separate dashboards: one for teachers and one for students.  
+Teachers can manage all students, capture faces, train recognition data, and view attendance logs.  
+Students can log in to track their attendance progress via graphs and detailed statistics.
+
+The system automatically detects faces using the webcam, compares them with the trained encodings, and marks attendance instantly.
+
 ## Features
 
 - Face Registration: Capture student faces and create encoded training data
@@ -14,14 +21,6 @@ This project is an AI-powered automated attendance system that replaces traditio
 - Login Authentication System for Students and Teachers
 - Clean and responsive GUI built with CustomTkinter
 - SQLite, JSON, and CSV data storage support
-
-## Project Overview
-
-The system provides two separate dashboards: one for teachers and one for students.  
-Teachers can manage all students, capture faces, train recognition data, and view attendance logs.  
-Students can log in to track their attendance progress via graphs and detailed statistics.
-
-The system automatically detects faces using the webcam, compares them with the trained encodings, and marks attendance instantly.
 
 ## Technologies Used
 
@@ -121,24 +120,6 @@ Login -> Dashboard -> View students -> Capture faces -> Train data -> View atten
 
 ### Student Dashboard Flow
 Login -> Dashboard -> View attendance summary -> View graphs -> Profile details
-
-## Setup Instructions
-
-1. Install Python 3.9 or higher
-2. Install required dependencies:
-   pip install -r requirements.txt
-3. Run User_Authentication.py to log in
-4. Use Teacher account to add students and capture faces
-5. Train the model using train_data.py
-6. Start the full system using main.py
-
-## Common Issues and Fixes
-
-- Camera not working: Change camera index in cv2.VideoCapture(0)
-- face_recognition errors: Install CMake and Visual C++ Build Tools
-- Training not detecting faces: Ensure lighting is sufficient during capture
-- Attendance duplication: The system prevents multiple entries on the same day
-
 ## Future Enhancements
 
 - Cloud database integration
