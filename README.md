@@ -1,4 +1,4 @@
-👨‍🏫 Facial Recognition Attendance System
+#👨‍🏫 Facial Recognition Attendance System
 
 The Facial Recognition Attendance System is an AI-powered automated attendance platform that replaces manual roll-calling with live facial recognition.
 It identifies individuals via webcam, matches their stored facial encodings, and records attendance automatically with timestamp logging.
