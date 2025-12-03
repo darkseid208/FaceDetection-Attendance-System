@@ -90,7 +90,7 @@ Attendance is stored inside:
 - students.db (optional)
 - JSON files for dashboard display
 
-## D0atabase Structure
+## Database Structure
 
 ### users.db
 Stores login details:
