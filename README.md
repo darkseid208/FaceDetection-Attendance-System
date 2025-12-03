@@ -1,20 +1,153 @@
-#👨‍🏫 Facial Recognition Attendance System
+# Facial Recognition Attendance System
 
-The Facial Recognition Attendance System is an AI-powered automated attendance platform that replaces manual roll-calling with live facial recognition.
-It identifies individuals via webcam, matches their stored facial encodings, and records attendance automatically with timestamp logging.
+This project is an AI-powered automated attendance system that replaces traditional manual roll-calling with live facial recognition. It uses webcam-based face detection, generates face encodings, identifies individuals, and records attendance with timestamps.
 
-✨ Features
+## Features
 
-Face Registration – Capture student faces and generate encoded data
+- Face Registration: Capture student faces and create encoded training data
+- Real-Time Face Recognition: Detect and match faces through webcam
+- Automatic Attendance Marking: Log student name, date, and time
+- Teacher Dashboard: Manage students, view reports, track attendance
+- Student Dashboard: Personal attendance tracking with graphs
+- Manual Attendance Control for Teachers
+- Attendance Export to CSV
+- Login Authentication System for Students and Teachers
+- Clean and responsive GUI built with CustomTkinter
+- SQLite, JSON, and CSV data storage support
 
-Real-Time Recognition – Detect and match faces through webcam
+## Project Overview
 
-Automatic Attendance Marking – Log name, date, and time instantly
+The system provides two separate dashboards: one for teachers and one for students.  
+Teachers can manage all students, capture faces, train recognition data, and view attendance logs.  
+Students can log in to track their attendance progress via graphs and detailed statistics.
 
-Teacher Dashboard – Reports, student management, attendance viewing
+The system automatically detects faces using the webcam, compares them with the trained encodings, and marks attendance instantly.
 
-Student Login Panel – Personal attendance tracking
+## Technologies Used
 
-Clean GUI (CustomTkinter)
+- Python 3
+- Tkinter and CustomTkinter (GUI)
+- OpenCV for webcam video capture
+- face_recognition (dlib-based face detection and encoding)
+- SQLite databases (students.db, users.db)
+- CSV files (attendance.csv)
+- JSON files (profiles.json, students.json)
+- PIL for image processing
+- Matplotlib for attendance graphs
 
-Secure MySQL Database Storage
+## Folder Structure
+
+Facial Recognition Attendance System/
+│
+├── main.py                     (Main application with dashboards)
+├── User_Authentication.py      (Login system)
+├── capture_all_students.py     (Capture images for training)
+├── train_data.py               (Generates facial encodings and creates train.pkl)
+├── attendance.py               (Attendance marking logic)
+├── student.py                  (Student data model)
+├── view_attendance.py          (Graph rendering)
+│
+├── profiles.json               (All user profiles)
+├── students.json               (Student details)
+├── warnings.json               (Warning information)
+├── attendance.csv              (Attendance log)
+├── students_local.csv          (Local backup of students)
+├── train.pkl                   (Trained facial encodings)
+│
+├── students.db                 (Student database)
+├── users.db                    (User login database)
+│
+├── dataset/                    (Captured images for training)
+├── known_faces/                (Encoded face data)
+├── certified_faces/            (Verified face images)
+├── profile_images/             (Profile photos)
+├── media/                      (UI images and icons)
+├── images/                     (Misc images)
+├── exports/                    (Exported reports)
+│
+└── venv/                       (Virtual environment)
+
+## How the System Works
+
+### 1. Face Capture
+The teacher captures multiple images of each student using the webcam.  
+These images are saved inside the dataset folder sorted by student ID.
+
+### 2. Training Encodings
+The train_data.py script:
+- Reads all captured images
+- Detects faces
+- Generates encoding vectors
+- Stores them in train.pkl
+
+### 3. Real-Time Recognition
+During attendance:
+- Webcam captures live video frames
+- face_recognition extracts face encodings
+- System compares them with known encodings
+- When a match is found, attendance is recorded automatically
+
+### 4. Attendance Logging
+Attendance is stored inside:
+- attendance.csv
+- students.db (optional)
+- JSON files for dashboard display
+
+## Database Structure
+
+### users.db
+Stores login details:
+- username
+- password
+- role (Teacher or Student)
+
+### students.db
+Stores student information:
+- student_id
+- full_name
+- department
+- course
+- email
+- phone
+- profile_pic
+
+## Workflows
+
+### Automatic Attendance Flow
+Webcam -> Face Detection -> Encoding -> Compare -> Match -> Mark Attendance
+
+### Teacher Dashboard Flow
+Login -> Dashboard -> View students -> Capture faces -> Train data -> View attendance -> Export CSV
+
+### Student Dashboard Flow
+Login -> Dashboard -> View attendance summary -> View graphs -> Profile details
+
+## Setup Instructions
+
+1. Install Python 3.9 or higher
+2. Install required dependencies:
+   pip install -r requirements.txt
+3. Run User_Authentication.py to log in
+4. Use Teacher account to add students and capture faces
+5. Train the model using train_data.py
+6. Start the full system using main.py
+
+## Common Issues and Fixes
+
+- Camera not working: Change camera index in cv2.VideoCapture(0)
+- face_recognition errors: Install CMake and Visual C++ Build Tools
+- Training not detecting faces: Ensure lighting is sufficient during capture
+- Attendance duplication: The system prevents multiple entries on the same day
+
+## Future Enhancements
+
+- Cloud database integration
+- Mobile app for students
+- Improved UI with animations
+- Notification system for low attendance
+- Admin panel with full system controls
+
+
+
+This project is for educational and personal use only.
+
