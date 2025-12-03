@@ -1,142 +1,129 @@
-The Facial Recognition Attendance System is an AI–driven platform that automates attendance using live face detection and recognition.
-It eliminates manual attendance, reduces proxy marking, and provides real-time tracking through a dedicated teacher dashboard and student attendance panel.
-This system uses computer vision, machine learning, and database persistence to securely recognize faces and store attendance records.
+👨‍🏫 Facial Recognition Attendance System
 
+The Facial Recognition Attendance System is an AI-powered automated attendance platform that replaces manual roll-calling with live facial recognition.
+It identifies individuals via webcam, matches their stored facial encodings, and records attendance automatically with timestamp logging.
 
 ✨ Features
 
-Face Registration – Capture student faces and generate encoded data.
+Face Registration – Capture student faces and generate encoded data
 
-Real-Time Face Recognition – Detect and match faces via webcam.
+Real-Time Recognition – Detect and match faces through webcam
 
-Automatic Attendance Marking – Record date, time, and identity instantly.
+Automatic Attendance Marking – Logs name, date, time instantly
 
-Teacher Panel – Login access, attendance view, student management.
+Teacher Dashboard – Reports, student management, attendance viewing
 
-Student Panel – Secure login to check personal attendance history.
+Student Login Panel – Personal attendance tracking
 
-GUI-Based Interface – Simple buttons and visually clean layouts.
+Clean GUI (CustomTkinter)
 
-MySQL Storage – Attendance saved persistently for reporting.
-
-Encoding Accuracy – Uses machine-learning embeddings for matching.
+Secure MySQL Database Storage
 
 🧑‍🏫 Teacher Functions
 
-✔ Login securely
-✔ Register student records and capture images
-✔ Start recognition mode to record attendance
-✔ View daily/monthly attendance logs
-✔ Manage/edit student entries
+✔ Login authentication
+✔ Register students with face data
+✔ Start attendance detection
+✔ View attendance logs
+✔ Manage student data
 
 🎓 Student Functions
 
 ✔ Login to student dashboard
 ✔ View personal attendance history
-✔ Receive real-time recognition confirmation
+✔ Get real-time recognition status
 
-Students cannot change or delete attendance — they only view their records.
+Students cannot edit or remove attendance — only teachers can manage data.
 
 🛠 Tech Stack
-📌 Backend & AI
+Backend & Core AI
 
 Python
 
 OpenCV
 
-face_recognition (dlib encoding)
+face_recognition / dlib
 
-MySQL database
+GUI
 
-JSON for data storage
+CustomTkinter
 
-📌 GUI
+Database
 
-CustomTkinter (dark-themed UI)
+MySQL
 
-📂 Project Structure
+JSON files for local storage
+
+📂 Project Structure (Markdown formatted)
 Facial-Recognition-Attendance-System/
 │
-├── main.py                     # Application entry point
+├── main.py                     # Application launcher
 │
-├── gui/                        # GUI screens (Login, Teacher, Student)
+├── gui/                        # User interface screens
 │   ├── login_ui.py
 │   ├── teacher_dashboard.py
 │   ├── student_panel.py
 │
-├── database/                   # Data logic & JSON files
-│   ├── student.json
+├── database/                   # DB logic + JSON records
 │   ├── db_connect.py
+│   ├── students.json
 │
-├── encodings/                  # Encoded face data
-│   ├── student_encodings.dat
+├── encodings/                  # Stored recognition data
 │
-├── images/                     # Captured student face photos
+├── images/                     # Face capture images
 │
-└── README.md                   # Project documentation
+└── README.md                   # Documentation
 
 🔧 How to Run Locally
-🔹 Step 1 — Extract Project Folder
+Step 1: Extract Folder
 
-Open your project folder.
+Open the root project directory.
 
-🔹 Step 2 — Install Dependencies
+Step 2: Install required libraries
 pip install opencv-python
 pip install face_recognition
 pip install customtkinter
 pip install mysql-connector-python
 
-🔹 Step 3 — Setup MySQL Database
 
-Create a database:
+Note: dlib installation depends on OS compatibility.
 
+Step 3: Configure MySQL
 CREATE DATABASE attendance_system;
 
 
-Update database credentials inside project files.
+Edit project files to update host/user/password.
 
-🔹 Step 4 — Run the Project
+Step 4: Run UI
 python main.py
 
-📌 Recognition Workflow
+📌 Processing Workflow
+Register Face → Encode → Webcam Recognition → Match → Attendance Stored → Report View
 
-Teacher registers a student and captures face samples.
-
-System generates face encodings.
-
-Webcam scans faces in attendance mode.
-
-System compares features → identifies match.
-
-Attendance logs saved into database.
-
-📊 Outputs
-
-✔ Attendance stored as:
-
-Student_Name | Student_ID | Date | Time
+📊 Output Format
+Student_ID | Student_Name | Date | Time
 
 
-✔ Dashboard view
-✔ Student attendance screen
-✔ Recognition confirmation UI
+Displayed on teacher dashboard and student history panel.
 
-🌟 Advantages
+⭐ Advantages
 
-Fully contactless
+Fast automated attendance
 
-Eliminates proxy attendance
+Eliminates proxies
 
-Fast and accurate
+Easy retrieval and reporting
 
-Saves teacher time
-
-Easy reporting
+User-friendly UI
 
 🔮 Future Enhancements
 
-✨ Mobile app
-✨ Mask recognition support
-✨ Anti-spoof liveness detection
-✨ Cloud data sync
-✨ Notification alerts
+Mobile application support
+
+Mask recognition
+
+Cloud synchronization
+
+Alert notifications
+
+Anti-spoofing detection
