@@ -2,6 +2,7 @@ The Facial Recognition Attendance System is an AI–driven platform that automat
 It eliminates manual attendance, reduces proxy marking, and provides real-time tracking through a dedicated teacher dashboard and student attendance panel.
 This system uses computer vision, machine learning, and database persistence to securely recognize faces and store attendance records.
 
+
 ✨ Features
 
 Face Registration – Capture student faces and generate encoded data.
